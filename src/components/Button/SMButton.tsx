@@ -8,6 +8,9 @@ export const props = {
     type: String as PropType<IColor>,
     default: "blue",
   },
+  icon: String,
+  round: Boolean,
+  plain: Boolean,
 };
 
 export default defineComponent({
@@ -30,6 +33,7 @@ export default defineComponent({
             m-1
             `}
       >
+        {props.icon !== "" ? <i class={`i-ic-baseline-${props.icon} p-3`}></i> : ""}
         {slots.default?.() || "默认"}
       </button>
     );

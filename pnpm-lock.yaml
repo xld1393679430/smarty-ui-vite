@@ -1,6 +1,8 @@
 lockfileVersion: 5.4
 
 specifiers:
+  '@iconify-json/ic': ^1.1.8
+  '@unocss/preset-icons': ^0.45.6
   '@vitejs/plugin-vue': 2.3.3
   '@vitejs/plugin-vue-jsx': ^2.0.0
   unocss: ^0.45.6
@@ -8,6 +10,8 @@ specifiers:
   vue: 3.2.37
 
 dependencies:
+  '@iconify-json/ic': registry.npmjs.org/@iconify-json/ic/1.1.8
+  '@unocss/preset-icons': registry.npmjs.org/@unocss/preset-icons/0.45.6
   '@vitejs/plugin-vue': registry.npmjs.org/@vitejs/plugin-vue/2.3.3_vite@3.0.5+vue@3.2.37
   '@vitejs/plugin-vue-jsx': registry.npmjs.org/@vitejs/plugin-vue-jsx/2.0.0_vite@3.0.5+vue@3.2.37
   unocss: registry.npmjs.org/unocss/0.45.6_vite@3.0.5
@@ -412,6 +416,14 @@ packages:
     requiresBuild: true
     dev: false
     optional: true
+
+  registry.npmjs.org/@iconify-json/ic/1.1.8:
+    resolution: {integrity: sha512-z7wF/a4wldA+6LVShp8rDCTd3zK/IovKCIdHuiTe5xgxzi9GdnexmZCZbMFol5JqgE1cFDveygTE9wtpfGq3tw==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@iconify-json/ic/-/ic-1.1.8.tgz}
+    name: '@iconify-json/ic'
+    version: 1.1.8
+    dependencies:
+      '@iconify/types': registry.npmjs.org/@iconify/types/1.1.0
+    dev: false
 
   registry.npmjs.org/@iconify/types/1.1.0:
     resolution: {integrity: sha512-Jh0llaK2LRXQoYsorIH8maClebsnzTcve+7U3rQUSnC11X4jtPnFuyatqFLvMxZ8MLG8dB4zfHsbPfuvxluONw==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@iconify/types/-/types-1.1.0.tgz}
