@@ -3,4 +3,4 @@ import SmartyUI from "./entry";
 import Container from './Layout'
 
 
-createApp(Container).mount("#app");
+createApp(Container).use(SmartyUI).mount("#app");
