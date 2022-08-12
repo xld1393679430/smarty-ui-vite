@@ -5,9 +5,6 @@ on:
   pull_request:
     branches: [ main ]
 jobs:
-  Lint:
-    steps:
-      run: pnpm run lint
   UnitTest:
     runs-on: ubuntu-latest
     steps:
