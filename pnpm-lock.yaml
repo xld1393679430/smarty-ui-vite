@@ -23,6 +23,7 @@ specifiers:
   jest: 28.1.3
   jsdom: 19.0.0
   prettier: 2.6.2
+  terser: ^5.14.2
   typescript: 4.1.6
   unocss: 0.33.4
   vite: 3.0.5
@@ -49,7 +50,7 @@ dependencies:
   eslint-plugin-vue: registry.npmjs.org/eslint-plugin-vue/8.6.0_eslint@8.13.0
   husky: registry.npmjs.org/husky/8.0.1
   prettier: registry.npmjs.org/prettier/2.6.2
-  vite: registry.npmjs.org/vite/3.0.5
+  vite: registry.npmjs.org/vite/3.0.5_terser@5.14.2
   vue: registry.npmjs.org/vue/3.2.37
 
 devDependencies:
@@ -58,6 +59,7 @@ devDependencies:
   happy-dom: registry.npmjs.org/happy-dom/4.0.0
   jest: registry.npmjs.org/jest/28.1.3
   jsdom: registry.npmjs.org/jsdom/19.0.0
+  terser: registry.npmjs.org/terser/5.14.2
   typescript: registry.npmjs.org/typescript/4.1.6
   unocss: registry.npmjs.org/unocss/0.33.4_vite@3.0.5
   vitepress: registry.npmjs.org/vitepress/0.22.4
@@ -1381,6 +1383,14 @@ packages:
     version: 1.1.2
     engines: {node: '>=6.0.0'}
 
+  registry.npmjs.org/@jridgewell/source-map/0.3.2:
+    resolution: {integrity: sha512-m7O9o2uR8k2ObDysZYzdfhb08VuEml5oWGiosa1VdaPZ/A6QyPkAJuwN0Q1lhULOf6B7MtQmHENS743hWtCrgw==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@jridgewell/source-map/-/source-map-0.3.2.tgz}
+    name: '@jridgewell/source-map'
+    version: 0.3.2
+    dependencies:
+      '@jridgewell/gen-mapping': registry.npmjs.org/@jridgewell/gen-mapping/0.3.2
+      '@jridgewell/trace-mapping': registry.npmjs.org/@jridgewell/trace-mapping/0.3.15
+
   registry.npmjs.org/@jridgewell/sourcemap-codec/1.4.14:
     resolution: {integrity: sha512-XPSJHWmi394fuUuzDnGz1wiKqWfo1yXecHQMRf2l6hztTO+nPru658AyDngaBe7isIxEkRsPR3FZh+s7iVa4Uw==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/@jridgewell/sourcemap-codec/-/sourcemap-codec-1.4.14.tgz}
     name: '@jridgewell/sourcemap-codec'
@@ -2051,7 +2061,7 @@ packages:
       '@unocss/scope': registry.npmjs.org/@unocss/scope/0.33.4
       '@unocss/transformer-directives': registry.npmjs.org/@unocss/transformer-directives/0.33.4
       magic-string: registry.npmjs.org/magic-string/0.26.2
-      vite: registry.npmjs.org/vite/3.0.5
+      vite: registry.npmjs.org/vite/3.0.5_terser@5.14.2
     dev: true
 
   registry.npmjs.org/@vitejs/plugin-vue-jsx/1.3.10:
@@ -2106,7 +2116,7 @@ packages:
       vite: ^2.5.10
       vue: ^3.2.25
     dependencies:
-      vite: registry.npmjs.org/vite/3.0.5
+      vite: registry.npmjs.org/vite/3.0.5_terser@5.14.2
       vue: registry.npmjs.org/vue/3.2.37
     dev: false
 
@@ -2684,7 +2694,6 @@ packages:
     resolution: {integrity: sha512-E+XQCRwSbaaiChtv6k6Dwgc+bx+Bs6vuKJHHl5kox/BaKbhiXzqQOwK4cO22yElGp2OCmjwVhT3HmxgyPGnJfQ==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/buffer-from/-/buffer-from-1.1.2.tgz}
     name: buffer-from
     version: 1.1.2
-    dev: true
 
   registry.npmjs.org/buffer/5.7.1:
     resolution: {integrity: sha512-EHcyIPBQ4BSGlvjB16k5KgAJ27CIsHY/2JBmCRReo48y9rQ3MaUzWX3KVlBa4U7MyX02HdVj0K7C3WaB3ju7FQ==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/buffer/-/buffer-5.7.1.tgz}
@@ -2917,6 +2926,11 @@ packages:
     engines: {node: '>= 0.8'}
     dependencies:
       delayed-stream: registry.npmjs.org/delayed-stream/1.0.0
+
+  registry.npmjs.org/commander/2.20.3:
+    resolution: {integrity: sha512-GpVkmM8vF2vQUkj2LvZmD35JxeJOLCwJ9cUkugyk2nuhbv3+mJvpLYYt+0+USMxE+oj+ey/lJEnhZw75x/OMcQ==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/commander/-/commander-2.20.3.tgz}
+    name: commander
+    version: 2.20.3
 
   registry.npmjs.org/compare-func/2.0.0:
     resolution: {integrity: sha512-zHig5N+tPWARooBnb0Zx1MFcdfpyJrfTJ3Y5L+IFvUm8rM74hHz66z0gw0x4tijh5CorKkKUCnW82R2vmpeCRA==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/compare-func/-/compare-func-2.0.0.tgz}
@@ -6453,6 +6467,14 @@ packages:
       source-map: registry.npmjs.org/source-map/0.6.1
     dev: true
 
+  registry.npmjs.org/source-map-support/0.5.21:
+    resolution: {integrity: sha512-uBHU3L3czsIyYXKX88fdrGovxdSCoTGDRZ6SYXtSRxLZUzHg5P/66Ht6uoUlHu9EZod+inXhKo3qQgwXUT/y1w==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/source-map-support/-/source-map-support-0.5.21.tgz}
+    name: source-map-support
+    version: 0.5.21
+    dependencies:
+      buffer-from: registry.npmjs.org/buffer-from/1.1.2
+      source-map: registry.npmjs.org/source-map/0.6.1
+
   registry.npmjs.org/source-map/0.6.1:
     resolution: {integrity: sha512-UjgapumWlbMhkBgzT7Ykc5YXUT46F0iKu8SGXq0bcwP5dz/h0Plj6enJqjz1Zbq2l5WaqYnrVbwWOWMyF3F47g==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/source-map/-/source-map-0.6.1.tgz}
     name: source-map
@@ -6675,6 +6697,18 @@ packages:
       ansi-escapes: registry.npmjs.org/ansi-escapes/4.3.2
       supports-hyperlinks: registry.npmjs.org/supports-hyperlinks/2.2.0
     dev: true
+
+  registry.npmjs.org/terser/5.14.2:
+    resolution: {integrity: sha512-oL0rGeM/WFQCUd0y2QrWxYnq7tfSuKBiqTjRPWrRgB46WD/kiwHwF8T23z78H6Q6kGCuuHcPB+KULHRdxvVGQA==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/terser/-/terser-5.14.2.tgz}
+    name: terser
+    version: 5.14.2
+    engines: {node: '>=10'}
+    hasBin: true
+    dependencies:
+      '@jridgewell/source-map': registry.npmjs.org/@jridgewell/source-map/0.3.2
+      acorn: registry.npmjs.org/acorn/8.8.0
+      commander: registry.npmjs.org/commander/2.20.3
+      source-map-support: registry.npmjs.org/source-map-support/0.5.21
 
   registry.npmjs.org/test-exclude/6.0.0:
     resolution: {integrity: sha512-cAGWPIyOHU6zlmg88jwm7VRyXnMN7iV68OGAbYDk/Mh/xC/pzVPlQtY6ngoIH/5/tciuhGfvESU8GrHrcxD56w==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/test-exclude/-/test-exclude-6.0.0.tgz}
@@ -7115,8 +7149,9 @@ packages:
       fsevents: registry.npmjs.org/fsevents/2.3.2
     dev: true
 
-  registry.npmjs.org/vite/3.0.5:
+  registry.npmjs.org/vite/3.0.5_terser@5.14.2:
     resolution: {integrity: sha512-bRvrt9Tw8EGW4jj64aYFTnVg134E8hgDxyl/eEHnxiGqYk7/pTPss6CWlurqPOUzqvEoZkZ58Ws+Iu8MB87iMA==, registry: https://registry.yarnpkg.com/, tarball: https://registry.npmjs.org/vite/-/vite-3.0.5.tgz}
+    id: registry.npmjs.org/vite/3.0.5
     name: vite
     version: 3.0.5
     engines: {node: ^14.18.0 || >=16.0.0}
@@ -7140,6 +7175,7 @@ packages:
       postcss: registry.npmjs.org/postcss/8.4.16
       resolve: registry.npmjs.org/resolve/1.22.1
       rollup: registry.npmjs.org/rollup/2.77.3
+      terser: registry.npmjs.org/terser/5.14.2
     optionalDependencies:
       fsevents: registry.npmjs.org/fsevents/2.3.2
 

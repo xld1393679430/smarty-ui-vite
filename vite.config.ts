@@ -27,7 +27,11 @@ export default defineConfig({
   // 添加库模式配置
   build: {
     rollupOptions,
-    minify: false,
+    minify: `terser`,
+    // 输出单独sourcemap
+    sourcemap: true,
+    // 生成压缩大小报告
+    // brotliSize: true,
     lib: {
       entry: "./src/entry.ts",
       name: "SmartyUI",
@@ -35,17 +39,18 @@ export default defineConfig({
       // 导出模块格式
       formats: ["es", "umd", "iife"],
     },
+    outDir: "./dist",
   },
   test: {
     // enable jest-like global test APIs
     globals: true,
     // simulate DOM with happy-dom
     // (requires installing happy-dom as a peer dependency)
-    environment: 'happy-dom',
+    environment: "happy-dom",
     transformMode: {
-      web: [/.[tj]sx$/]
+      web: [/.[tj]sx$/],
     },
     // ./src/__tests__ 是使用jest测试用例 故排除
-    exclude: ['./src/__tests__']
-  }
+    exclude: ["./src/__tests__"],
+  },
 });
