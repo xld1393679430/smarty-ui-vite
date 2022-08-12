@@ -13,7 +13,12 @@ module.exports = {
   },
   // 解析 .vue 文件
   parser: "vue-eslint-parser",
-  extends: ["plugin:json/recommended", "plugin:vue/vue3-essential", "eslint:recommended", "@vue/prettier"],
+  extends: [
+    "plugin:json/recommended",
+    "plugin:vue/vue3-essential",
+    "eslint:recommended",
+    "@vue/prettier",
+  ],
   plugins: ["@typescript-eslint"],
   parserOptions: {
     parser: "@typescript-eslint/parser", // 解析 .ts 文件
@@ -22,5 +27,6 @@ module.exports = {
     "no-console": process.env.NODE_ENV === "production" ? "warn" : "off",
     "no-debugger": process.env.NODE_ENV === "production" ? "warn" : "off",
     "prettier/prettier": "error",
+    "no-unused-vars": "off",
   },
 };
