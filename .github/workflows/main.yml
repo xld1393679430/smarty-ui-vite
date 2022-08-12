@@ -1,9 +1,9 @@
 name: CI
-on: 
-  push
-    branches: [main]
-  pull_requests:
-    branches: [main]
+on:
+  push:
+    branches: [ main ]
+  pull_request:
+    branches: [ main ]
 jobs:
   Lint:
     # Lint任务
@@ -11,11 +11,11 @@ jobs:
     # 单元测试任务
     runs-on: ubuntu-latest
     steps:
-      - uses: actions/checkout@v2
-      - uses: pnpm/action-setup@2.1.0
-        with:
-          version: 7.2.1
-      - name: Install modules
-        run: pnpm install
-      - name: Run Test
-        run: pnpm run test:run
+    - uses: actions/checkout@v2
+    - uses: pnpm/action-setup@v2.1.0
+      with:
+        version: 7.2.1
+    - name: Install modules
+      run: pnpm install
+    - name: Run Test
+      run: pnpm run test:run
